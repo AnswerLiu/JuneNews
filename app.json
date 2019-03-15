@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#119CEF",
+    "navigationBarTitleText": "六月新闻",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#666",
+    "backgroundColor":"#fff",
+    "selectedColor":"#119CEF",
+    "list":[
+      {
+        "pagePath":"pages/home/home",
+        "text":"资 讯",
+        "iconPath":"/images/home.png",
+        "selectedIconPath":"/images/blue-home.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我 的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/blue-my.png"
+      }
+    ]
+  }
+}

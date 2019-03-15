@@ -1,0 +1,79 @@
+<!--pages/home/home.wxml-->
+<!-- 导航区 start -->
+<view id='header'>
+  <!-- 搜索框 -->
+  <navigator url='/pages/search/search'>
+  <view class='search pull-left'>
+    <image src='../../images/search.png' style='width:44rpx;height:48rpx;'></image>
+  </view>
+  </navigator>
+  <!-- 频道 -->
+  <scroll-view scroll-x class='channels pull-left' scroll-into-view="{{activeChannel}}" scroll-with-animation="true">
+    <view bindtap="clickChangeChannel" data-id="{{item.id}}" id='{{item.id}}' data-index="{{index}}"
+    class="{{item.id == activeChannel ? 'active' : ''}}" wx:for="{{channels}}">{{item.name}}</view>
+  </scroll-view>
+  <!-- 加号 -->
+  <view class='plus pull-left' bindtap='showPindao'>
+    <image src='../../images/add.png' style='width:44rpx;height:48rpx;'></image>
+  </view>
+</view>
+<!-- 导航区 end -->
+<!-- 内容区 start -->
+<view id='content' class='' style='height:{{height}}px'>
+  <!-- 轮播图 -->
+  <!-- <scroll-view class='carousel' wx:if="{{!isVip}}" scroll-y>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval='{{interval}}' duration='{{duration}}' indicator-color='{{indicatorColor}}' circular="{{circular}}" previous-margin='{{previousMargin}}' next-margin='{{nextMargin}}' indicator-active-color="{{indicatorActiveColor}}">
+      <view wx:for="{{imgUrls}}">
+        <swiper-item>
+          <navigator url='{{item.link}}' hover-class='navigator-hover'>
+            <image src='{{item.url}}' style='width:690rpx;height:290rpx;border-radius:10rpx;'></image>
+          </navigator>
+        </swiper-item>
+      </view>
+    </swiper>
+  </scroll-view> -->
+  <!-- 轮播图 end -->
+  <swiper current-item-id='{{activeChannel}}' bindchange="swipeChangeChannel">
+    <swiper-item wx:for="{{channels}}" wx:for-item="pindao" item-id="{{pindao.id}}" data-index="{{index}}">
+      <scroll-view class='news-list' scroll-y enable-back-to-top="true" bindscrolltolower="lower" lower-threshold='100rpx'>
+        <view wx:for="{{pindao.data}}" class='item'>
+        <navigator url='/pages/detail/detail?id={{item.id}}'>
+          <!-- 标题 -->
+          <view class='title'>{{item.title}}</view>
+          <!-- 媒体 -->
+          <view class='media'>{{item.source}} {{item.ptime}}</view>
+        </navigator>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 内容区 end -->
+<!-- 遮罩区 start -->
+<view id='zhezhao' wx:if="{{isShow}}">
+  <!-- 关闭按钮 -->
+  <view class='close' bindtap='hidePindao'>
+    <image src='../../images/black-close.png' style='width:32rpx;height:32rpx;'></image>
+  </view>
+  <!-- 我的频道 -->
+  <view class='mine-channels'>
+    <view class='title'>
+      <text class='b-title'>我的频道</text>
+      <text class='s-title'> 选中不放可以拖拽排序</text>
+    </view>
+    <view class='channels'>
+      <view class='item' wx:for="{{[1,1,1,1,1,1,1,1,1,1]}}">推荐<image class='channels-img' src='../../images/roundclose.png' style='width:30rpx;height:30rpx;'></image></view>
+    </view>
+  </view>
+  <!-- 其他频道 -->
+  <view class='other-channels'>
+    <view class='title'>
+      <text class='b-title'>其他频道</text>
+      <text class='s-title'> 点击添加频道</text>
+    </view>
+    <view class='channels'>
+      <view class='item' wx:for="{{[1,1,1,1,1,1,1,1,1,1]}}"> <!--<image src='../../images/add.png' style='width:35rpx;height:35rpx;'></image> -->+ 两性</view>
+    </view>
+  </view>
+</view>
+<!-- 遮罩区 end -->

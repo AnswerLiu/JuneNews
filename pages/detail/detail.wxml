@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view id='content'>
+  <view class='title'>
+    {{title}}
+  </view>
+  <view class='media'>
+    <view class='time pull-left'>{{time}}</view>
+    <view class='source'>({{source}})</view>
+  </view>
+
+  <view class='content'>
+    <template is="wxParse" data="{{wxParseData:body.nodes}}"/>
+  </view>
+</view>
