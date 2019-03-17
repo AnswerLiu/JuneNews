@@ -40,16 +40,15 @@
   border-left: solid 1rpx #ddd;
   box-shadow: -2rpx 0rpx 6rpx #ddd;
 }
-
-/* 内容区 */
-#content{
-  width: 100%;
-}
 /* 轮播图 */
-#content .carousel{
+.carousel{
   width: 690rpx;
   height: 300rpx;
   padding: 10rpx 30rpx;
+}
+/* 内容区 */
+#content{
+  width: 100%;
 }
 #content swiper{
   height: 100%;
@@ -60,18 +59,28 @@
   padding: 0rpx 30rpx;
 }
 .news-list .item{
+  width: 100%;
   min-height: 80rpx;
   border-bottom: solid 1rpx #e8e8e8;
   box-shadow: -2rpx 0rpx 4rpx #e8e8e8;
-  padding: 30rpx 0rpx;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
 }
 .news-list .item .title{
   font-size: 36rpx;
 }
 .news-list .item .media{
+  float: left;
+  width: 500rpx;
   font-size: 23rpx;
   color: #999;
-  padding-top: 30rpx;
+}
+.news-list .item .comment{
+  float: right;
+  width: 120rpx;
+  font-size: 23rpx;
+  color: #999;
+  margin-bottom: -30rpx;
 }
 
 /* 隐藏滚动条 */

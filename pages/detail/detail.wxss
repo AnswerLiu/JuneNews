@@ -29,6 +29,6 @@
   float: left;
 }
 .content{
-  font-size: 32rpx;
+  font-size: 34rpx;
   padding-top: 30rpx;
 }

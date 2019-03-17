@@ -18,9 +18,7 @@
   </view>
 </view>
 <!-- 导航区 end -->
-<!-- 内容区 start -->
-<view id='content' class='' style='height:{{height}}px'>
-  <!-- 轮播图 -->
+<!-- 轮播图 -->
   <!-- <scroll-view class='carousel' wx:if="{{!isVip}}" scroll-y>
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval='{{interval}}' duration='{{duration}}' indicator-color='{{indicatorColor}}' circular="{{circular}}" previous-margin='{{previousMargin}}' next-margin='{{nextMargin}}' indicator-active-color="{{indicatorActiveColor}}">
       <view wx:for="{{imgUrls}}">
@@ -33,6 +31,8 @@
     </swiper>
   </scroll-view> -->
   <!-- 轮播图 end -->
+<!-- 内容区 start -->
+<view id='content' class='' style='height:{{height}}px'>
   <swiper current-item-id='{{activeChannel}}' bindchange="swipeChangeChannel">
     <swiper-item wx:for="{{channels}}" wx:for-item="pindao" item-id="{{pindao.id}}" data-index="{{index}}">
       <scroll-view class='news-list' scroll-y enable-back-to-top="true" bindscrolltolower="lower" lower-threshold='100rpx'>
@@ -42,6 +42,8 @@
           <view class='title'>{{item.title}}</view>
           <!-- 媒体 -->
           <view class='media'>{{item.source}} {{item.ptime}}</view>
+          <!-- 评论 -->
+          <view class='comment'>评论</view>
         </navigator>
         </view>
       </scroll-view>

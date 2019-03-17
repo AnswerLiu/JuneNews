@@ -1,2 +1,50 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<!-- 用户头部 -->
+<view id='header'>
+  <!-- 用户信息 -->
+  <view class='user'>
+    <!-- 头像 -->
+    <view class='head'><image src='../../images/default.png' style='width:150rpx;height:150rpx;border-radius:50%;'></image></view>
+    <view class='info'>
+      <!-- 昵称 -->
+      <view class='nickname'>俏黄蓉</view>
+      <!-- 个人信息 -->
+      <view class='userinfo'>少妇 | 浙江-桃花岛</view>
+    </view>
+  </view>
+  <!-- 设置 -->
+  <view class='site'>
+    <button class='btn' size='mini' style='background-color:#119CEF;color:#F0F6FD;border-radius:30rpx;'><image src='../../images/setting.png' style='width:30rpx;height:30rpx;position:relative;top:6rpx;'></image> 设置</button>
+  </view>
+</view>
+<!-- 用户活跃区，粉丝和关注 -->
+<view id='activity'>
+  <!-- 关注 -->
+  <view class='follow'>10 关注</view>
+  <view class='border'></view>
+  <!-- 粉丝 -->
+  <view class='fans'>20 粉丝</view>
+</view>
+<!-- 收藏和评论 -->
+<scroll-view scroll-x class='favorite' >
+   <!-- 收藏 -->
+  <view class='collect active'>收藏</view>
+  <view class='gap'></view>
+  <!-- 评论 -->
+  <view class='comment'>评论</view>
+</scroll-view>
+<!-- 内容区 -->
+<view id='content' style=''>
+<swiper>
+  <swiper-item>
+    <scroll-view class='cont-list' scroll-x>
+      <view class='collect-cont'>
+        暂无收藏暂无收藏暂无收藏暂无收藏暂无收藏
+      </view>
+      <view class='comment-cont'>
+        暂无评论暂无评论暂无评论暂无评论暂无评论
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+</view>
