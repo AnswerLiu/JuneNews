@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/user/user",
     "pages/home/home",
-    
+    "pages/user/user",
     "pages/search/search",
     "pages/detail/detail",
     "pages/index/index",
@@ -11,7 +10,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#119CEF",
-    "navigationBarTitleText": "六月新闻",
+    "navigationBarTitleText": "XmasNews",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{

@@ -9,7 +9,7 @@
       <!-- 昵称 -->
       <view class='nickname'>俏黄蓉</view>
       <!-- 个人信息 -->
-      <view class='userinfo'>少妇 | 浙江-桃花岛</view>
+      <view class='userinfo'>女 | 浙江-桃花岛</view>
     </view>
   </view>
   <!-- 设置 -->
@@ -39,10 +39,10 @@
   <swiper-item>
     <scroll-view class='cont-list' scroll-x>
       <view class='collect-cont'>
-        暂无收藏暂无收藏暂无收藏暂无收藏暂无收藏
+        <image src='../../images/kong.png' style='width:300rpx;height:300rpx;padding-top: 200rpx;padding-left: 200rpx;'></image>
       </view>
       <view class='comment-cont'>
-        暂无评论暂无评论暂无评论暂无评论暂无评论
+        <image src='../../images/kong.png' style='width:300rpx;height:300rpx;padding-top: 200rpx;padding-left: 200rpx;'></image>
       </view>
     </scroll-view>
   </swiper-item>
